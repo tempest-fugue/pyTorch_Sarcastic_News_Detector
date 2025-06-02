@@ -1,3 +1,93 @@
+# 🤖 Sarcastic News Headline Detector
+This project uses natural language processing (NLP) and deep learning to detect sarcasm in news headlines. It's a binary classification task aimed at identifying whether a given headline is sarcastic or not, using a dataset curated for this specific problem.
+
+# 📌 Project Overview
+The goal is to build and train a neural network model capable of understanding the subtle cues that distinguish sarcasm from literal text. It involves:
+
+Text preprocessing and cleaning
+
+Tokenization and padding
+
+Building a PyTorch-based LSTM model
+
+Training and evaluating the model on labeled data
+
+Saving the best-performing model for inference
+
+# 📂 Project Structure
+bash
+Copy
+Edit
+├── sarcastic_news_headline_detector.ipynb  # Main notebook with data, modeling, and evaluation
+├── README.md                               # Project overview and instructions
+├── LICENSE                                 # License info (MIT by default)
+├── /src
+│   └── my_dataset.py                       # Custom dataset class and utilities
+🧠 Model Architecture
+Embedding Layer: Converts words into dense vectors
+
+LSTM Layer: Captures temporal dependencies in the sequence
+
+Fully Connected Layer: Outputs logits for binary classification
+
+Loss Function: Binary Cross-Entropy Loss
+
+Optimizer: Adam
+
+# 📊 Dataset
+The dataset includes sarcastic and non-sarcastic news headlines, each labeled appropriately. It is split into training, validation, and test sets with preprocessing handled in the notebook and my_dataset.py.
+
+# 🚀 How to Run
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/your-username/pyTorch_Sarcastic_News_Detector.git
+cd pyTorch_Sarcastic_News_Detector
+Install dependencies:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Run the notebook:
+Open sarcastic_news_headline_detector.ipynb in Jupyter or VS Code and run cells sequentially.
+
+🧪 Evaluation Metrics
+Accuracy
+
+Precision / Recall / F1-score
+
+Confusion Matrix
+
+ROC-AUC Curve
+
+# 💾 Model Saving
+The best model (based on validation F1-score) is saved as best_model.pth and can be loaded for final evaluation or inference.
+
+# 🔧 Requirements
+Python 3.8+
+
+PyTorch
+
+scikit-learn
+
+pandas
+
+numpy
+
+tqdm
+
+(Add requirements.txt if not already created.)
+
+# 📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+# 🤝 Contributing
+Pull requests and collaborations are welcome! Please open an issue to discuss your proposed changes before submitting a PR.
+
+Let me know if you'd like a version with badges (e.g. PyTorch, license, etc.) or additional setup instructions for the src/ folder.
 # PyTorch Sarcastic News Headline Detector
 Notebook uses a custom pyTorch training/validation loop modifying a foundational LLM (BERT) to detect sarcastic news headlines. This represents a NLP classification task.
 
@@ -39,9 +129,9 @@ Place kaggle.json in your environment:
 
 For Jupyter or Colab notebooks, upload the kaggle.json file, then run:
 
-'''import os
-os.environ['KAGGLE_CONFIG_DIR'] = '/path/to/your/json/'
-Alternatively, place kaggle.json in your home directory under ~/.kaggle/'''
+"""import os
+os.environ['KAGGLE_CONFIG_DIR'] = '/path/to/your/json/' """
+Alternatively, place kaggle.json in your home directory under ~/.kaggle/
 
 Install and use opendatasets to download the dataset:
 
