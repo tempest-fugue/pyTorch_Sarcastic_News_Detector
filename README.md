@@ -15,15 +15,14 @@ Training and evaluating the model on labeled data
 Saving the best-performing model for inference
 
 # 📂 Project Structure
-bash
-Copy
-Edit
+```
 ├── sarcastic_news_headline_detector.ipynb  # Main notebook with data, modeling, and evaluation
 ├── README.md                               # Project overview and instructions
 ├── LICENSE                                 # License info (MIT by default)
 ├── /src
 │   └── my_dataset.py                       # Custom dataset class and utilities
 🧠 Model Architecture
+```
 Embedding Layer: Converts words into dense vectors
 
 LSTM Layer: Captures temporal dependencies in the sequence
@@ -39,22 +38,20 @@ The dataset includes sarcastic and non-sarcastic news headlines, each labeled ap
 
 # 🚀 How to Run
 Clone the repository:
-
-bash
-Copy
-Edit
+```
 git clone https://github.com/your-username/pyTorch_Sarcastic_News_Detector.git
 cd pyTorch_Sarcastic_News_Detector
+```
 Install dependencies:
 
-bash
-Copy
-Edit
+```
 pip install -r requirements.txt
+```
+
 Run the notebook:
 Open sarcastic_news_headline_detector.ipynb in Jupyter or VS Code and run cells sequentially.
 
-🧪 Evaluation Metrics
+# 🧪 Evaluation Metrics
 Accuracy
 
 Precision / Recall / F1-score
@@ -77,7 +74,7 @@ pandas
 
 numpy
 
-tqdm
+rich
 
 (Add requirements.txt if not already created.)
 
@@ -129,15 +126,15 @@ Place kaggle.json in your environment:
 
 For Jupyter or Colab notebooks, upload the kaggle.json file, then run:
 
-"""import os
-os.environ['KAGGLE_CONFIG_DIR'] = '/path/to/your/json/' """
+```import os
+os.environ['KAGGLE_CONFIG_DIR'] = '/path/to/your/json/' ```
 Alternatively, place kaggle.json in your home directory under ~/.kaggle/
 
 Install and use opendatasets to download the dataset:
 
-'''!pip install opendatasets
+```!pip install opendatasets
 import opendatasets as od
-od.download("https://www.kaggle.com/dataset-url")'''
+od.download("https://www.kaggle.com/dataset-url")```
 ⚠️ Note: If you're running this in an environment like Google Colab, remember to re-upload kaggle.json each session unless you're mounting from Google Drive.
 
 Let me know if you'd like this tailored for Colab-only, or with the actual dataset name/URL filled in.
