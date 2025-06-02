@@ -104,12 +104,12 @@ Notebook uses a custom pyTorch training/validation loop modifying a foundational
 |      10 |       0.3735 |     0.3359 |         0.837552 |       0.844864 |     0.8375 |   0.8445 |          0.9138 |        0.932  |        17.2321  |
 
 
-📦 Dataset Access
+# 📦 Dataset Access
 This project uses a dataset hosted on Kaggle and accessed programmatically using the opendatasets library. The dataset is not included in this repository to reduce size and avoid licensing issues.
 
 To download the dataset automatically when running the notebook, you’ll need to set up Kaggle API access.
 
-🔑 Kaggle API Setup
+# 🔑 Kaggle API Setup
 Create a Kaggle account (if you don’t have one): https://www.kaggle.com/account
 
 Generate your API token:
@@ -126,15 +126,18 @@ Place kaggle.json in your environment:
 
 For Jupyter or Colab notebooks, upload the kaggle.json file, then run:
 
-```import os
-os.environ['KAGGLE_CONFIG_DIR'] = '/path/to/your/json/' ```
+```
+import os
+os.environ['KAGGLE_CONFIG_DIR'] = '/path/to/your/json/'
+```
 Alternatively, place kaggle.json in your home directory under ~/.kaggle/
 
 Install and use opendatasets to download the dataset:
-
-```!pip install opendatasets
+```
+!pip install opendatasets
 import opendatasets as od
-od.download("https://www.kaggle.com/dataset-url")```
+od.download("https://www.kaggle.com/dataset-url")
+```
 ⚠️ Note: If you're running this in an environment like Google Colab, remember to re-upload kaggle.json each session unless you're mounting from Google Drive.
 
 Let me know if you'd like this tailored for Colab-only, or with the actual dataset name/URL filled in.
